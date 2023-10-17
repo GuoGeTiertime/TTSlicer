@@ -47,7 +47,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         id: get-version-unix
         run: |
-          ver=$(grep 'set(SoftFever_VERSION' version.inc | cut -d '"' -f2)
+          ver=$(grep 'set(Tiertime_VERSION' version.inc | cut -d '"' -f2)
           echo "ver=$ver" >> $GITHUB_ENV
           echo "date=$(date +'%Y%m%d')" >> $GITHUB_ENV
         shell: bash
@@ -59,7 +59,7 @@ jobs:
           echo "date=$(Get-Date -Format 'yyyyMMdd')" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8
           # Extract the version from the file
           $versionContent = Get-Content version.inc -Raw
-          if ($versionContent -match 'set\(SoftFever_VERSION "(.*?)"\)') {
+          if ($versionContent -match 'set\(Tiertime_VERSION "(.*?)"\)') {
               $ver = $matches[1]
           }
           echo "ver=$ver" | Out-File -Append -FilePath $env:GITHUB_ENV -Encoding utf8

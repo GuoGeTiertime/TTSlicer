@@ -8,9 +8,9 @@ PRODUCTVERSION @SLIC3R_VERSION@
   {
    VALUE "CompanyName", "SoftFever"
    VALUE "FileDescription", "@SLIC3R_APP_NAME@ G-code Viewer"
-   VALUE "FileVersion", "@SLIC3R_BUILD_ID@"
+   VALUE "FileVersion", "@FILEVERSION@"
    VALUE "ProductName", "@SLIC3R_APP_NAME@ G-code Viewer"
-   VALUE "ProductVersion", "@SLIC3R_BUILD_ID@"
+   VALUE "ProductVersion", "@PRODUCTVERSION@"
    VALUE "InternalName", "@SLIC3R_APP_NAME@ G-code Viewer"
    VALUE "LegalCopyright", ""
    VALUE "OriginalFilename", "bambu-gcodeviewer.exe"

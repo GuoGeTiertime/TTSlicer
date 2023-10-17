@@ -33,7 +33,7 @@ function usage() {
     echo "   -g: force gtk2 build"
     echo "   -b: build in debug mode"
     echo "   -d: build deps (optional)"
-    echo "   -s: build orca-slicer (optional)"
+    echo "   -s: build UPStudio-2024 (optional)"
     echo "   -u: only update clock & dependency packets (optional and need sudo)"
     echo "   -r: skip free ram check (low ram compiling)"
     echo "For a first use, you want to 'sudo ./BuildLinux.sh -u'"
