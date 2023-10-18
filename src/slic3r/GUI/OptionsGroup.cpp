@@ -1251,6 +1251,8 @@ wxString OptionsGroup::get_url(const std::string& path_end)
         str = str.Left(pos) + anchor;
     }
     // Softfever: point to sf wiki for seam parameters
+    return wxString::Format(L"https://tiertime.com/Software/UpStudio2024/wiki/%s", from_u8(path_end));//modify later, add by guoge 20231018
+    
     if (path_end == "Seam") {
         return wxString::Format(L"https://github.com/SoftFever/OrcaSlicer/wiki/%s", from_u8(path_end));
     }
