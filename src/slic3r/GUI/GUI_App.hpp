@@ -662,6 +662,9 @@ DECLARE_APP(GUI_App)
 wxDECLARE_EVENT(EVT_CONNECT_LAN_MODE_PRINT, wxCommandEvent);
 
 bool is_support_filament(int extruder_id);
+
+#define APP_TITLE_ICO "/images/TiertimeTitle.ico"
+
 } // namespace GUI
 } // Slic3r
 
