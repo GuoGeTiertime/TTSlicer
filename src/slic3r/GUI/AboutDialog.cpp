@@ -118,6 +118,7 @@ void CopyrightsDialog::fill_entries()
         { "TBB",                                            "",      "https://www.intel.cn/content/www/cn/zh/developer/tools/oneapi/onetbb.html" },
         { "wxWidgets",                                      "",      "https://www.wxwidgets.org" },
         { "zlib",                                           "",      "http://zlib.net" },
+        { "OrcaSlicer",                                     "",      "https://github.com/SoftFever/OrcaSlicer" },
 
     };
 }
@@ -147,8 +148,9 @@ wxString CopyrightsDialog::get_html_text()
                 "<font size=\"3\">",
          bgr_clr_str, text_clr_str, text_clr_str,
         _L("License"),
-        _L("Orca Slicer is licensed under "),
+        _L("UPStudio 2024 is licensed under "),
         "https://www.gnu.org/licenses/agpl-3.0.html",_L("GNU Affero General Public License, version 3"),
+        _L("UPStudio 2024 is based on Orca Slicer"),
         _L("Orca Slicer is based on BambuStudio by Bambulab, which is from PrusaSlicer by Prusa Research.  PrusaSlicer is from Slic3r by Alessandro Ranellucci and the RepRap community"),
         _L("Libraries"),
         _L("This software uses open source components whose copyright and other proprietary rights belong to their respective owners"));
@@ -231,7 +233,7 @@ AboutDialog::AboutDialog()
     main_sizer->Add(ver_sizer, 0, wxEXPAND | wxALL, 0);
 
     // logo
-    m_logo_bitmap = ScalableBitmap(this, "OrcaSlicer_about", 250);
+    m_logo_bitmap = ScalableBitmap(this, "UPStudio2024_about", 250);
     m_logo = new wxStaticBitmap(this, wxID_ANY, m_logo_bitmap.bmp(), wxDefaultPosition,wxDefaultSize, 0);
     m_logo->SetSizer(vesizer);
 
@@ -240,9 +242,9 @@ AboutDialog::AboutDialog()
     // version
     {
         vesizer->Add(0, FromDIP(165), 1, wxEXPAND, FromDIP(5));
-        auto version_string = _L("Orca Slicer ") + " " + std::string(Tiertime_VERSION);
+        auto version_string = _L("UPStudio 2024 ") + " " + std::string(Tiertime_VERSION);
         wxStaticText* version = new wxStaticText(this, wxID_ANY, version_string.c_str(), wxDefaultPosition, wxDefaultSize);
-        wxStaticText* bs_version = new wxStaticText(this, wxID_ANY, wxString::Format("Based on BambuStudio and PrusaSlicer"), wxDefaultPosition, wxDefaultSize);
+        wxStaticText* bs_version = new wxStaticText(this, wxID_ANY, wxString::Format("Based on OrcaSlicer, BambuStudio and PrusaSlicer"), wxDefaultPosition, wxDefaultSize);
         bs_version->SetFont(Label::Body_12);
         wxFont version_font = GetFont();
         #ifdef __WXMSW__
@@ -275,6 +277,7 @@ AboutDialog::AboutDialog()
     text_sizer_horiz->Add( 0, 0, 0, wxLEFT, FromDIP(20));
 
     std::vector<wxString> text_list;
+    text_list.push_back(_L("UPStudio 2024 is based on OrcaSlicer, BambuStudio, PrusaSlicer, and SuperSlicer."));
     text_list.push_back(_L("OrcaSlicer is based on BambuStudio, PrusaSlicer, and SuperSlicer."));
     text_list.push_back(_L("BambuStudio is originally based on PrusaSlicer by PrusaResearch."));
     text_list.push_back(_L("PrusaSlicer is originally based on Slic3r by Alessandro Ranellucci."));
