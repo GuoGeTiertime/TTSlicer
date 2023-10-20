@@ -992,15 +992,15 @@ wxWindow* PreferencesDialog::create_general_page()
     });
 
 #ifdef _WIN32
-    auto title_associate_file = create_item_title(_L("Associate files to OrcaSlicer"), page, _L("Associate files to OrcaSlicer"));
+    auto title_associate_file = create_item_title(_L("Associate files to UPStudio"), page, _L("Associate files to UPStudio"));
 
     // associate file
-    auto item_associate_3mf  = create_item_checkbox(_L("Associate .3mf files to OrcaSlicer"), page,
-                                                        _L("If enabled, sets OrcaSlicer as default application to open .3mf files"), 50, "associate_3mf");
-    auto item_associate_stl  = create_item_checkbox(_L("Associate .stl files to OrcaSlicer"), page,
-                                                        _L("If enabled, sets OrcaSlicer as default application to open .stl files"), 50, "associate_stl");
-    auto item_associate_step = create_item_checkbox(_L("Associate .step/.stp files to OrcaSlicer"), page,
-                                                         _L("If enabled, sets OrcaSlicer as default application to open .step files"), 50, "associate_step");
+    auto item_associate_3mf  = create_item_checkbox(_L("Associate .3mf files to UPStudio"), page,
+                                                        _L("If enabled, sets UPStudio as default application to open .3mf files"), 50, "associate_3mf");
+    auto item_associate_stl  = create_item_checkbox(_L("Associate .stl files to UPStudio"), page,
+                                                        _L("If enabled, sets UPStudio as default application to open .stl files"), 50, "associate_stl");
+    auto item_associate_step = create_item_checkbox(_L("Associate .step/.stp files to UPStudio"), page,
+                                                         _L("If enabled, sets UPStudio as default application to open .step files"), 50, "associate_step");
 #endif // _WIN32
 
     auto title_modelmall = create_item_title(_L("Online Models"), page, _L("Online Models"));
@@ -1032,7 +1032,7 @@ wxWindow* PreferencesDialog::create_general_page()
 
     auto title_develop_mode = create_item_title(_L("Develop mode"), page, _L("Develop mode"));
     auto item_develop_mode  = create_item_checkbox(_L("Develop mode"), page, _L("Develop mode"), 50, "developer_mode");
-    auto item_skip_ams_blacklist_check  = create_item_checkbox(_L("Skip AMS blacklist check"), page, _L("Skip AMS blacklist check"), 50, "skip_ams_blacklist_check");
+    //auto item_skip_ams_blacklist_check  = create_item_checkbox(_L("Skip AMS blacklist check"), page, _L("Skip AMS blacklist check"), 50, "skip_ams_blacklist_check");
 
     sizer_page->Add(title_general_settings, 0, wxEXPAND, 0);
     sizer_page->Add(item_language, 0, wxTOP, FromDIP(3));
@@ -1080,7 +1080,7 @@ wxWindow* PreferencesDialog::create_general_page()
 
     sizer_page->Add(title_develop_mode, 0, wxTOP | wxEXPAND, FromDIP(20));
     sizer_page->Add(item_develop_mode, 0, wxTOP, FromDIP(3));
-    sizer_page->Add(item_skip_ams_blacklist_check, 0, wxTOP, FromDIP(3));
+    //sizer_page->Add(item_skip_ams_blacklist_check, 0, wxTOP, FromDIP(3));
 
     page->SetSizer(sizer_page);
     page->Layout();
