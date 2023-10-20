@@ -2830,7 +2830,7 @@ bool GUI_App::on_init_network(bool try_backup)
 __retry:
     if (!load_agent_dll) {
         BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << ": on_init_network, load dll ok";
-        if (check_networking_version()) {
+        if ( 1 || check_networking_version()) {
             BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << ": on_init_network, compatibility version";
             auto bambu_source = Slic3r::NetworkAgent::get_bambu_source_entry();
             if (!bambu_source) {
