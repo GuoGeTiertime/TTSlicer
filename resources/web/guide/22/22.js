@@ -260,6 +260,9 @@ function SortUI()
 		$("#AcceptBtn").hide();
 		$("#GotoNetPluginBtn").show();
 	}
+	//not need install newwork plugin, modify by guoge 20231023
+	$("#AcceptBtn").show();
+	$("#GotoNetPluginBtn").hide();
 }
 
 
