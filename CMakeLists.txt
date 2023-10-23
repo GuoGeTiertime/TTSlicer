@@ -52,8 +52,8 @@ if (APPLE)
     if (CMAKE_MACOSX_BUNDLE)
         set(CMAKE_INSTALL_RPATH @executable_path/../Frameworks)
     endif()
-    set(CMAKE_OSX_DEPLOYMENT_TARGET "11.3" CACHE STRING "Minimum OS X deployment version" FORCE)
-    SET(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.tiertime.UPStudio-2024")
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "14.0" CACHE STRING "Minimum OS X deployment version" FORCE)
+    SET(CMAKE_XCODE_ATTRIBUTE_PRODUCT_BUNDLE_IDENTIFIER "com.softfever3d.orca-slicer")
 
 endif ()
 
