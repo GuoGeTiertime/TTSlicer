@@ -69,7 +69,7 @@ function HandleModelList( pVal )
 			if( sVV=="BBL" )
 				sVV="Bambu Lab";
 			if( sVV=="Custom")
-				sVV="Custom Printer";
+				sVV="Custom Printer(UPStudio 2024)";
 			if( sVV=="Other")
 				sVV="Orca colosseum";
 

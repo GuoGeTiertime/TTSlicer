@@ -42,7 +42,7 @@ static std::vector<std::string> s_project_options {
 };
 
 //BBS: add BBL as default
-const char *PresetBundle::BBL_BUNDLE = "Custom";
+const char *PresetBundle::BBL_BUNDLE = "Snapmaker"; //"Custom";
 const char *PresetBundle::BBL_DEFAULT_PRINTER_MODEL = "MyKlipper 0.4 nozzle";
 const char *PresetBundle::BBL_DEFAULT_PRINTER_VARIANT = "0.4";
 const char *PresetBundle::BBL_DEFAULT_FILAMENT = "My Generic PLA";
