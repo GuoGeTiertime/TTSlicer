@@ -2863,6 +2863,8 @@ __retry:
         }
     }
 
+    create_network_agent = true; //add by guoge, force create network agent! 20231024
+
     if (create_network_agent) {
         BOOST_LOG_TRIVIAL(info) << __FUNCTION__ << boost::format(", create network agent...");
         m_agent = new Slic3r::NetworkAgent();

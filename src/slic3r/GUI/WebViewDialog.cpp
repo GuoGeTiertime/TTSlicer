@@ -472,7 +472,8 @@ void WebViewPanel::ShowNetpluginTip()
     bool        bValid       = wxGetApp().is_compatibility_version();
 
     int nShow = 0;
-    if (!bValid) nShow = 1;
+
+    //if (!bValid) nShow = 1; //rem by guoge, not install bambu network plugin, 20231024.
 
     BOOST_LOG_TRIVIAL(info) << __FUNCTION__<< boost::format(": bValid=%1%, nShow=%2%")%bValid %nShow;
 
