@@ -6477,3 +6477,4 @@ bool is_support_filament(int extruder_id)
 
 } // GUI
 } //Slic3r
+
