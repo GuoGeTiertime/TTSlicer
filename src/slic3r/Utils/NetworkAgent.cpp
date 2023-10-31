@@ -760,6 +760,7 @@ int  NetworkAgent::change_user(std::string user_info)
 
 bool NetworkAgent::is_user_login()
 {
+    return !m_CurUserName.empty();
     bool ret = false;
     if (network_agent && is_user_login_ptr) {
         ret = is_user_login_ptr(network_agent);
@@ -780,6 +781,7 @@ int  NetworkAgent::user_logout()
 
 std::string NetworkAgent::get_user_id()
 {
+    return m_CurUserName;
     std::string ret;
     if (network_agent && get_user_id_ptr) {
         ret = get_user_id_ptr(network_agent);
@@ -789,6 +791,7 @@ std::string NetworkAgent::get_user_id()
 
 std::string NetworkAgent::get_user_name()
 {
+    return m_CurUserName;
     std::string ret;
     if (network_agent && get_user_name_ptr) {
         ret = get_user_name_ptr(network_agent);

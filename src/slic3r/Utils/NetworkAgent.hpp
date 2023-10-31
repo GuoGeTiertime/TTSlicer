@@ -287,6 +287,11 @@ private:
     static func_get_oss_config                 get_oss_config_ptr;
     static func_put_rating_picture_oss         put_rating_picture_oss_ptr;
     static func_get_model_mall_rating_result   get_model_mall_rating_result_ptr;
+
+
+private:
+    std::string m_CurUserName = "tiertime2024";
+
 };
 
 }
