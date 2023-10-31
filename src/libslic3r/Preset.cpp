@@ -1068,6 +1068,7 @@ void PresetCollection::load_presets(
                     boost::optional<Semver> version = Semver::parse(version_str);
                     if (!version) continue;
                     Semver app_version = *(Semver::parse(SLIC3R_VERSION));
+                    version = app_version; //add by guoge 20231031, not compare config file version.
                     if ( version->maj() !=  app_version.maj()) {
                         BOOST_LOG_TRIVIAL(warning) << "Preset incompatibla, not loading: " << name;
                         continue;
