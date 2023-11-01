@@ -3540,6 +3540,12 @@ void MainFrame::refresh_plugin_tips()
         m_webview->ShowNetpluginTip();
 }
 
+void MainFrame::refresh_login_info()
+{
+    if (m_webview != nullptr)
+        m_webview->SendLoginInfo();
+}
+
 void MainFrame::RunScript(wxString js)
 {
     if (m_webview != nullptr)

@@ -458,11 +458,21 @@ void WebViewPanel::OpenModelDetail(std::string id, NetworkAgent *agent)
 
 void WebViewPanel::SendLoginInfo()
 {
-    if (wxGetApp().getAgent()) {
-        std::string login_info = wxGetApp().getAgent()->build_login_info();
-        wxString strJS = wxString::Format("window.postMessage(%s)", login_info);
-        RunScript(strJS);
-    }
+    // if (wxGetApp().getAgent()) {
+    //     std::string login_info = wxGetApp().getAgent()->build_login_info();
+    //     wxString strJS = wxString::Format("window.postMessage(%s)", login_info);
+    //     RunScript(strJS);
+    // }
+
+    json m_Res           = json::object();
+    m_Res["command"]     = "studio_userlogin";
+    m_Res["sequence_id"] = "10002";
+    m_Res["data"]["avatar"] = "https://cdn.pixabay.com/photo/2020/11/05/11/26/robotic-5714849_1280.png"; //"img/wiki3.png";
+    m_Res["data"]["name"] = "tiertime2024-1";
+
+    wxString strJS = wxString::Format("window.postMessage(%s)", m_Res.dump(-1, ' ', false, json::error_handler_t::ignore));
+
+    RunScript(strJS);
 }
 
 void WebViewPanel::ShowNetpluginTip()

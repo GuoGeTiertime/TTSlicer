@@ -3789,6 +3789,8 @@ std::string GUI_App::handle_web_request(std::string cmd)
                 CallAfter([this] {
                         get_login_info();
                     });
+                //add by guoge, 20231101. update the login user info (call by homepage oninit())
+                CallAfter([this] { mainframe->refresh_login_info(); });
             }
             else if (command_str.compare("homepage_login_or_register") == 0) {
                 CallAfter([this] {
